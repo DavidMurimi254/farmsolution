@@ -1,0 +1,105 @@
+:root {
+  --main-color: #0c0c0c;
+  --display-color: #005f24;
+  --default-dark: black;
+  --default-bright: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--main-color);
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+  transition: all ease-out 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--display-color);
+  color: white;
+}
+
+.signUpwallPaper {
+  background-image: url(../public/pexels-bence-szemerey-337043-15203364.jpg);
+  width: 100%;
+  height: 100dvh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.flexForm {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+form h2 {
+  text-align: center;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+  backdrop-filter: blur(50px);
+  height: 90dvh;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  transition: all ease-out 0.5s;
+}
+
+form fieldset {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+}
+
+form input, form select {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  outline: none;
+}
+
+option {
+  color: black;
+}
+
+form button {
+  width: 50%;
+  margin: 20px auto;
+  display: block;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+form span {
+  color: yellowgreen;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  button:hover {
+    background-color: var(--display-color);
+    color: white;
+  }
+
+  form {
+    width: 60%;
+  }
+
+  .flexForm {
+    width: 90%;
+  }
+}
