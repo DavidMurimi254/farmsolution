@@ -8,9 +8,13 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--main-color);
+  background-color: white;
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 button {
@@ -40,42 +44,103 @@ button:hover {
   margin: auto;
 }
 
-form h2 {
+.flexForm form {
+  backdrop-filter: blur(100px);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.signUpwallPaper h2 {
   text-align: center;
 }
 
-form {
-  width: 90%;
+.signUpwallPaper {
+  width: 100%;
+  height: 100dvh;
   margin: auto;
   backdrop-filter: blur(50px);
-  height: 90dvh;
-  border-radius: 10px;
   padding: 10px;
-  color: white;
   transition: all ease-out 0.5s;
 }
 
-form fieldset {
-  border: 2px solid white;
+.signUpwallPaper {
+  color: white;
+}
+
+.addFieldBox form, .addAnalysisForm {
+  color: black;
+  width: 300px;
+  background-color: var(--default-bright);
+  box-shadow: 0 0 30px 1px black;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.addFieldBox form button, .addAnalysisForm button {
+  width: 50%;
+  border: none;
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+
+.addFieldBox form p {
+  margin: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signUpwallPaper fieldset, .addFieldBox fieldset {
   border-radius: 10px;
   margin: 10px;
   color: white;
 }
 
-form input, form select {
+.signUpwallPaper fieldset {
+  border: 2px solid white;
+}
+
+.addFieldBox fieldset, .addAnalysisForm fieldset {
+  border: 2px solid black;
+  color: black;
+}
+
+.addFieldBox input, .addAnalysisForm input {
+  color: black;
+}
+
+.signUpwallPaper input, .signUpwallPaper select {
+  color: white;
+}
+
+.signUpwallPaper input, .signUpwallPaper select, .addFieldBox input, .addAnalysisForm select {
   width: 100%;
   background-color: transparent;
   border: none;
   font-size: 16px;
-  color: white;
   outline: none;
+}
+
+.addAnalysisForm textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 option {
   color: black;
 }
 
-form button {
+.signUpwallPaper button {
   width: 50%;
   margin: 20px auto;
   display: block;
@@ -84,9 +149,262 @@ form button {
   border-radius: 10px;
 }
 
-form span {
+.signUpwallPaper span {
   color: yellowgreen;
   cursor: pointer;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 200px;
+  border-right: 1px solid #0000007e;
+  height: 100dvh;
+  z-index: 10;
+}
+
+aside button {
+  text-align: left;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+aside button:hover {
+  background: linear-gradient(90deg, var(--display-color), transparent);
+}
+
+aside h3 {
+  text-align: center;
+}
+
+.otherScreen {
+  padding: 10px;
+}
+
+.countSummarry {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.countSummarry div {
+  box-shadow: 0 0 20px 0.1px black;
+  width: 300px;
+  height: 200px;
+  gap: 10px;
+  background: linear-gradient(180deg, #37a05f, var(--display-color));
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.summarryBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.summarryBox div {
+  background-color: #0000000a;
+  border: 1px solid #005f248c;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.summarryBox div h2, .summarryBox div h4 {
+  margin: 2px;
+  opacity: 0.6;
+}
+
+.countSummarry div:nth-of-type(1) {
+  background: linear-gradient(180deg, var(--default-dark), var(--display-color)) ;
+}
+
+.countSummarry div h1 {
+  font-size: 70px;
+  margin: 0;
+}
+
+.countSummarry div span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.countSummarry div span button {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  transform: rotate(-40deg);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.countSummarry div span h2 {
+  margin: 0;
+}
+
+.otherInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.memberJoined, .fieldsUpdatedLatest {
+  background-color: #005f2418;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.memberJoined {
+  width: 60%;
+}
+
+.fieldsUpdatedLatest {
+  width: 39%;
+}
+
+.addFieldButton {
+  background-color: yellowgreen;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.addFieldBox form {
+  z-index: 0;
+}
+
+.analysisNote {
+  background-color: rgba(201, 1, 1, 0.185);
+  width: calc(100% - 30px);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.addFieldButton2 {
+  background-color: yellowgreen;
+  border: none;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: calc(100% - 150px);
+}
+
+.fieldBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.fieldBox:hover {
+  background-color: #005f2415;
+}
+
+.fielddataBox {
+  padding: 10px;
+}
+
+.cropNumber {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cropNumber p {
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.descriptionBtn {
+  width: 150px;
+  border: none;
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 50px auto;
+  display: block;
+}
+
+.addDebBtn {
+  background-color: yellowgreen;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  margin-left: calc(100% - 100px);
+}
+
+.tweetDesc {
+  background-color: #00000027;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.tweetDesc span {
+  opacity: 0.8;
+}
+
+.membersavailable {
+  border-top: 1px solid rgba(0, 0, 0, 0.452);
+}
+
+.membersavailable div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loadBar {
+  border-top: 2px solid rgba(0, 0, 0, 0.548);
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: auto;
+
+  animation: load 1s ease-out infinite;
+}
+
+@keyframes load {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(360deg);}
 }
 
 @media (min-width: 600px) {
@@ -101,5 +419,80 @@ form span {
 
   .flexForm {
     width: 90%;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .otherScreen {
+    width: calc(100% - 200px);
+  }
+
+  .flexScreen {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .close {
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .flexForm form {
+    width: 100%;
+  }
+
+  aside {
+    position: fixed;
+    top: 0;
+    transition: all ease-out 0.5s;
+    background-color: white;
+  }
+
+  .dropDownBtn div {
+    width: 20px;
+    padding: 1px;
+    background-color: black;
+    margin: 4px;
+    z-index: -2;
+  }
+
+  .dropDownBtn {
+    margin: 10px;
+  }
+
+  .countSummarry div {
+    width: 100%;
+    height: 270px;
+    margin: 10px auto;
+  }
+
+  .countSummarry div h1 {
+    font-size: 100px;
+  }
+
+  .otherInfo {
+    flex-direction: column;
+  }
+
+  .memberJoined, .fieldsUpdatedLatest {
+    width: 100%;
+    height: 500px;
+  }
+
+  .memberJoined h3, .fieldsUpdatedLatest h3 {
+    text-align: center;
+  }
+
+  .addFieldBox form {
+    width: 70%;
+  }
+
+  .summarryBox {
+    grid-template-columns: 1fr;
   }
 }

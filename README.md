@@ -1,16 +1,51 @@
-# React + Vite
+# HOW SYSTEM WORKS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-User signs up in **/signup**.
+-After successful signup the page will automatically redirect to **/login** page
+-if you try to access the main page (e.g http://localhost:5000), the app will automatically return you to **/login** page.
+-In **/signup** page you choose a role, but the admin can only be registered once, the rest of sign up must be agents only.
+-After successful login a token will be provided from the backend to give you authorization to the system, depending on the role you are, some features are limited to see
+-On desktop the sidebar is visible, but in phone display click the three dashes to make the sidebar appear.
+-You have Two pages listed in sidebar, **Dashboard** and **Fields**
+The dahsboard has simple boxes showing number of users, fields and crops you have grown.
+-In **Field** page you can add or view the data inside the field.
+-The field page changes url, and gives you unique url that you can visit any time, or you can share to other users that dont want to sign up.
+-In field page you get Plated date, when the crops will be ready, and when the harvest will happen.
+-At the bottom you have every crop the user cannot tamper with the data or add anything only the agent and admin.
+-Everytime you add a detail, a form must pop up, and you can fill the details as needed.
 
-Currently, two official plugins are available:
+# HOW TO RUN THE APP
+## BACKEND
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Open backend folder, In terminal run **npm init**, next run **npm install**
+2. And add a **.env**
+3. Add the following credentials for you local mySQL database, and your jasonwebtoken key.
+``
+JASONWEBTOKEN=value
+PORT_SERVER=value
+DATABASENAME=value
+DBPORT=value
+HOST=value
+USER=value
+PASSWORD=value
+``
 
-## React Compiler
+4. Next, run **nodemon server.js**, if you face any error about module not found please check on my **package.json** file and check which package isn't there.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+5. You can check which package isn't available, by checking all the required packages at the top of **server.js**.
 
-## Expanding the ESLint configuration
+## FRONTEND
+1. Open farmsolution folder, run npm i install
+2. Run **npm run dev**
+3. Follow link after running the code, it will open in browser. Just make sure your server is running too.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## LANGUAGES USED
+**REACT** (framework)
+**Nodejs**
+**MySQL**
+
+## TABLES CREATED
+user TABLE for users data
+field TABLE for fields created
+crop TABLE for crops that will be created
+cropDetails details for the crops
