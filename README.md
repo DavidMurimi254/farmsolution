@@ -1,18 +1,18 @@
 # HOW SYSTEM WORKS
 
--User signs up in **/signup**.
--After successful signup the page will automatically redirect to **/login** page
--if you try to access the main page (e.g http://localhost:5000), the app will automatically return you to **/login** page.
--In **/signup** page you choose a role, but the admin can only be registered once, the rest of sign up must be agents only.
--After successful login a token will be provided from the backend to give you authorization to the system, depending on the role you are, some features are limited to see
--On desktop the sidebar is visible, but in phone display click the three dashes to make the sidebar appear.
--You have Two pages listed in sidebar, **Dashboard** and **Fields**
+- User signs up in **/signup**.
+- After successful signup the page will automatically redirect to **/login** page
+- if you try to access the main page (e.g http://localhost:5000), the app will automatically return you to **/login** page.
+- In **/signup** page you choose a role, but the admin can only be registered once, the rest of sign up must be agents only.
+- After successful login a token will be provided from the backend to give you authorization to the system, depending on the role you are, some features are limited to see
+- On desktop the sidebar is visible, but in phone display click the three dashes to make the sidebar appear.
+- You have Two pages listed in sidebar, **Dashboard** and **Fields**
 The dahsboard has simple boxes showing number of users, fields and crops you have grown.
--In **Field** page you can add or view the data inside the field.
--The field page changes url, and gives you unique url that you can visit any time, or you can share to other users that dont want to sign up.
--In field page you get Plated date, when the crops will be ready, and when the harvest will happen.
--At the bottom you have every crop the user cannot tamper with the data or add anything only the agent and admin.
--Everytime you add a detail, a form must pop up, and you can fill the details as needed.
+- In **Field** page you can add or view the data inside the field.
+- The field page changes url, and gives you unique url that you can visit any time, or you can share to other users that dont want to sign up.
+- In field page you get Plated date, when the crops will be ready, and when the harvest will happen.
+- At the bottom you have every crop the user cannot tamper with the data or add anything only the agent and admin.
+- Everytime you add a detail, a form must pop up, and you can fill the details as needed.
 
 # HOW TO RUN THE APP
 ## BACKEND
@@ -45,7 +45,7 @@ PASSWORD=value
 **MySQL**
 
 ## TABLES CREATED
-user TABLE for users data
-field TABLE for fields created
-crop TABLE for crops that will be created
-cropDetails details for the crops
+- user TABLE for users data
+- field TABLE for fields created
+- crop TABLE for crops that will be created
+- cropDetails details for the crops
